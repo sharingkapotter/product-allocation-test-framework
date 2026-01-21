@@ -50,13 +50,7 @@ The framework follows a realistic QA approach:
 
 ## Architecture Overview
 
-AllocationAPI
-│
-├── Business Rule Validator
-│
-├── SQLite Backend (Persistence)
-│
-└── Centralized Logging
+AllocationAPI >  Business Rule Validator > SQLite Backend (Persistence) > Centralized Logging
 
 
 ---
@@ -73,15 +67,16 @@ AllocationAPI
 
 ## Project Structure
 
-src/
-├── api/ # Allocation logic and API simulation
-├── validators/ # Business rule validation
-├── db/ # Database client and persistence
-tests/
-├── api/ # Pytest automation tests
-├── data/ # JSON-based test data
-config/ # Environment and path configuration
-utils/ # Logging utilities
+| Folder | Purpose |
+|------|--------|
+| `src/api/` | Allocation logic and API simulation |
+| `src/validators/` | Business rule validation |
+| `src/db/` | Database client and backend persistence |
+| `tests/api/` | Pytest automation tests |
+| `tests/data/` | JSON-based data-driven test cases |
+| `config/` | Environment and path configuration |
+| `utils/` | Centralized logging utilities |
+
 
 
 ---
